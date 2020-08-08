@@ -14,7 +14,8 @@ namespace EODHistoricalData.NET
             if (useProxy)
             {
                 HttpClientHandler myHandler = new HttpClientHandler();
-                myHandler.DefaultProxyCredentials = CredentialCache.DefaultCredentials;
+                //TODO
+                //myHandler.DefaultProxyCredentials = CredentialCache.DefaultCredentials;
                 _httpClient = new HttpClient(myHandler);
             }
             else

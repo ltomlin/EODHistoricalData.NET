@@ -59,7 +59,8 @@ namespace EODHistoricalData.NET
         public static RealTimePrice FromJson(string json)
         {
             RealTimePrice result = JsonConvert.DeserializeObject<RealTimePrice>(json, EODHistoricalData.NET.ConverterRealTimePrice.Settings);
-            result.TimestampAsDateTime = DateTimeOffset.FromUnixTimeSeconds(result.Timestamp).DateTime;
+            //TODO
+            //result.TimestampAsDateTime = DateTimeOffset.FromUnixTimeSeconds(result.Timestamp).DateTime;
             return result;
         }
     }
@@ -71,7 +72,8 @@ namespace EODHistoricalData.NET
         public static List<RealTimePrice> GetListFromJson(string json)
         {
             List<RealTimePrice> prices = JsonConvert.DeserializeObject<List<RealTimePrice>>(json, EODHistoricalData.NET.ConverterRealTimePrice.Settings);
-            prices.ForEach(x => x.TimestampAsDateTime = DateTimeOffset.FromUnixTimeSeconds(x.Timestamp).DateTime);
+            //TODO
+            //prices.ForEach(x => x.TimestampAsDateTime = DateTimeOffset.FromUnixTimeSeconds(x.Timestamp).DateTime);
             return prices;
         }
     }

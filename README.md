@@ -39,3 +39,4 @@ going-striker (https://github.com/going-striker)
 
 ### EODHistoricalData
 https://eodhistoricaldata.com/
+
